@@ -1,0 +1,21 @@
+
+public class RecursiveShellSort {
+	private static int ia[];
+	@SuppressWarnings("unused")
+	private static int[] shellSort(int[] a) {
+		int step = a.length / 2;
+				while (step >= 1) {
+					for (int i = step; i <a.length; i++) {
+						int temp = a[i];
+						int j;
+						for (j = i - step; j >= 0 && a[j] > temp; j -= step) {
+							a[j + step] = a[j];
+						}
+						a[j + step] = temp;
+					}
+					step = step / 2;
+				}
+				return a;
+				shellSort(int[] ia);
+	}
+}
